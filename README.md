@@ -1,4 +1,4 @@
-# latex-template
+# latex-templates
 My latex templates for engineering. <br>
 
 ## Credits
