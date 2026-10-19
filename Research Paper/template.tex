@@ -1,0 +1,33 @@
+% Packages
+\documentclass[letterpaper, twocolumn, twoside, 10pt]{article}
+\usepackage{authblk} % For author affiliations
+\usepackage{tcolorbox}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{authblk}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{datetime}
+\usepackage{enumitem}
+\usepackage[a4paper, top=1.5cm, bottom=2cm, left=1.5cm, right=1.5cm]{geometry}
+\usepackage{lipsum}
+\usepackage{fancyhdr}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{hyperref}
+\usepackage{bookmark}
+\usepackage{xurl}
+
+\usepackage{natbib}
+\bibliographystyle{apalike}
+
+% Date Formatting
+\newdateformat{mydate}{%
+  \THEDAY~\monthname[\THEMONTH],~\THEYEAR}
+\date{}
+
+% Author Settings
+\setlength{\affilsep}{1em}
+\renewcommand\Authfont{\color{gray}\normalfont\sffamily\scshape\fontsize{12}{14}\selectfont}
+\renewcommand\Affilfont{\color{gray}\normalfont\sffamily\itshape\fontsize{8}{10}\selectfont}
+\newcommand{\titlefont}{\normalfont\sffamily\bfseries\fontsize{21}{23}\selectfont}
+\hbadness=99999  % or any number >=10000

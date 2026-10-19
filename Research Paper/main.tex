@@ -1,0 +1,44 @@
+\input{template}
+% Page Formatting
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE]{Paper Heading} 
+\fancyhead[RO]{First Author, Second Author}
+\fancyfoot[C]{\thepage}
+
+% Title Formatting
+\title{\raggedright\textbf{
+    Paper Title
+    }}
+\author[1,*]{\raggedright First Author}
+\author[2]{Second Author}
+\affil[1]{Affiliation 1}
+\affil[2]{Affiliation 2}
+\affil[*]{Email 1}
+
+% Document
+\begin{document}
+\twocolumn[ % This starts two-column mode but allows a full-width block inside []
+  {
+    \maketitle
+    {\small\raggedright Compiled on: \mydate\today}
+    \begin{tcolorbox}[arc=0mm, colback=gray!10, boxrule=0.5pt, width=\textwidth]
+      \textbf{Abstract}\
+      This is the abstract. This is a citation \citep{author20xx}. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\\\\
+      \textbf{Keywords:} Keyword 1; Keyword 2; Keyword 3;
+    \end{tcolorbox}
+  }\vspace{0.5cm}
+]
+\section{Introduction}
+\lipsum[1-2]
+\section{Methods}
+\lipsum[3-6]
+\section{Results}
+\lipsum[7-11]
+\section{Discussion}
+\lipsum[12-15]
+\section{Conclusion}
+\lipsum[16-20]
+\bibliography{references}
+
+\end{document}
