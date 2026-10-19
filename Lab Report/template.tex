@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+
+% ---------- Font: Times New Roman ----------
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Termes}  % metric-compatible Times clone, ships with TeX Live and Overleaf
+
+% ---------- Page layout ----------
+\usepackage[a4paper,margin=1in]{geometry}
+
+% ---------- 1.5 line spacing ----------
+\usepackage{setspace}
+\onehalfspacing
+
+% ---------- Justified text (LaTeX default; package kept for explicit control) ----------
+\usepackage{ragged2e}
+
+% ---------- Graphics / flowchart boxes ----------
+\usepackage{tcolorbox}
+\tcbuselibrary{skins,breakable}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning}
+\usepackage{graphicx}
+\graphicspath{{./assets/}}
+
+% ---------- Math ----------
+\usepackage{amsmath}
+
+% ---------- Bibliography (BibTeX, APA-style author-year) ----------
+\usepackage{natbib}
+\bibliographystyle{apalike}
+
+% ---------- Hyperlinks / bookmarks ----------
+\usepackage{xurl}
+\usepackage[colorlinks=true,linkcolor=black,citecolor=black,urlcolor=blue,
+            bookmarksopen=true,bookmarksnumbered=true]{hyperref}
+\usepackage{cleveref}
+
+% ---------- Misc ----------
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{makecell}
+\usepackage[version=4]{mhchem}
+
+
+% A reusable style for the procedure flow-chart boxes
+\newtcolorbox{procbox}[1][]{
+  colback=blue!10,
+  colframe=black,
+  boxrule=0.4pt,
+  arc=0pt,
+  width=0.75\linewidth,
+  center,
+  fonttitle=\bfseries,
+  #1
+}
+
+\emergencystretch=1em
+
+\title{\textbf{CHE 1034: ORGANIC CHEMISTRY \\[4pt] Boiling Point Elevation}}
+\author{}
+\date{}
