@@ -12,6 +12,9 @@
 \definecolor{myg}{RGB}{56, 140, 70}        % claim accent
 \definecolor{myp}{RGB}{197, 92, 212}       % corollary accent
 \definecolor{myb}{RGB}{45, 111, 177}       % question accent
+\definecolor{myanswer}{HTML}{C94A4A}       % answer accent (lighter than mydefinitfr)
+\definecolor{myproofbg}{HTML}{FFF4E5}      % proof background
+\definecolor{myproofac}{HTML}{E07B00}      % proof accent (brighter than mylemmafr)
 
 \definecolor{mytheorembg}{HTML}{F2F2F9}
 \definecolor{mytheoremfr}{HTML}{00007B}
@@ -214,6 +217,30 @@
 }
 
 %================================
+% ANSWER BOX (unnumbered)
+%================================
+
+\newtcolorbox{answer}[1][]{
+	cmtribbonbox,
+	colframe=myanswer,
+	title={Answer},
+	#1
+}
+
+%================================
+% PROOF BOX (unnumbered)
+%================================
+
+% Free the name `proof` in case amsthm (or a class) already defines it
+\let\proof\relax
+\let\endproof\relax
+\newtcolorbox{proof}[1][]{
+	cmtleftthm={myproofbg}{myproofac},
+	title={Proof},
+	#1
+}
+
+%================================
 % CODEBLOCK
 %================================
 
@@ -280,3 +307,5 @@
 \newcommand{\qst}[2]{\begin{question}{#1}{}#2\end{question}}
 \newcommand{\nt}[1]{\begin{note}#1\end{note}}
 \newcommand{\qte}[1]{\begin{quotebox}#1\end{quotebox}}
+\newcommand{\ans}[1]{\begin{answer}#1\end{answer}}
+\newcommand{\prf}[1]{\begin{proof}#1\end{proof}}
